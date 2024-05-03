@@ -78,13 +78,15 @@
             <br>
             <label for="Email">Digite seu telefone:</label>
             <input type="text" id="telef" name="Telef">
+            <label for="quantidade-dias" class="form-label">Quantidade de dias:</label>
+            <input type="number" class="form-control" id="quantidade-dias" name="quantidade-dias" min="1" oninput="calcularEstadia()">
             <div id="Preço">
                 <table border="1px">
                     <br>
                     <br>
-                    <caption>Valores:</caption>
+                    <caption></caption>
                     <tr>
-                        <th>Número do quarto</th>
+                        <th>Número do quarto</th>   
                         <th>Quartos</th>
                         <th>Preço/Noite</th>
                     </tr>
@@ -139,11 +141,15 @@
             <label for="Noite">Selecione o Quarto:</label>
             <select id="noites" name="noites">
                 <option value="nada">Nada selecionado</option>
-                <option value="1">1 - R$ 100,00</option>
-                <option value="2">2 - R$ 150,00</option>
-                <option value="3">3 - R$ 200,00</option>
+                <option value="350">1 - R$ 350,00</option>
+                <option value="150">2 - R$ 415,00</option>
+                <option value="200">3 - R$ 620,00</option>
             </select>
             <br>
+            <div class="mb-3">
+                <label for="estadia" class="form-label">Total da Estadia:</label>
+                <input type="text" class="form-control" id="estadia" name="estadia" readonly>
+            </div>
             <br>
             <label for="mensagem">Deseja deixar algum comentário?:</label>
             <textarea id="mensagem" name="mensagem"></textarea>
